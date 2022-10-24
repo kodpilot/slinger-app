@@ -1,0 +1,359 @@
+:root {
+    --color1: var("--color1");
+    --color2: var("--color2");
+
+
+
+}
+
+/* 64ac15 */
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+.fas{
+    font-weight: 900;
+
+}
+/* The Modal (background) */
+.filter {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1111111111;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+/* Modal Content */
+.filter-content {
+    
+    margin: auto;
+    width: 50%;
+}
+
+/* The Close Button */
+.closeBtn {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    margin: 10px 20px;
+}
+
+.closeBtn:hover,
+.closeBtn:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+.title4 {
+    color: #000;
+    font-size: 14px
+}
+
+.filterRadio{
+    font-size: 12px;
+    cursor:pointer!important;
+}
+
+.filterInput,
+.filterInput[type="radio"]+label,
+.filterInput[type="checkbox"]+label:before,
+.filter.filterSelect option,
+.filter.filterSelect {
+    width: 100%;
+    padding: 1em;
+    line-height: 1.4;
+    background-color: #f9f9f9;
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+    -webkit-transition: 0.35s ease-in-out;
+    -moz-transition: 0.35s ease-in-out;
+    -o-transition: 0.35s ease-in-out;
+    transition: 0.35s ease-in-out;
+    transition: all 0.35s ease-in-out;
+    cursor:'pointer';
+}
+
+.filterInput:focus {
+    outline: 0;
+    border-color: var(--color1);
+}
+
+.filterInput:focus+.input-icon i {
+    color: var(--color1);
+}
+
+.filterInput:focus+.input-icon:after {
+    border-right-color: var(--color1);
+}
+
+.filterInput[type="radio"] {
+    display: none;
+}
+
+.filterInput[type="radio"]+label,
+.filter.filterSelect {
+    display: inline-block;
+    width: 50%;
+    text-align: center;
+    float: left;
+    border-radius: 0;
+}
+
+.filterInput[type="radio"]+label:first-of-type {
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.filterInput[type="radio"]+label:last-of-type {
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.filterInput[type="radio"]+label i {
+    padding-right: 0.4em;
+}
+
+.filterInput[type="radio"]:checked+label,
+.filterInput:checked+label:before,
+.filter.filterSelect:focus,
+.filter.filterSelect:active {
+    background-color: var(--color1);;
+   color: var(--color2);
+    border-color: var(--color2);
+}
+
+.filterInput[type="checkbox"] {
+    display: none;
+}
+
+.filterInput[type="checkbox"]+label {
+    position: relative;
+    display: block;
+    padding-left: 1.6em;
+}
+
+.filterInput[type="checkbox"]+label:before {
+    position: absolute;
+    top: 0.2em;
+    left: 0;
+    display: block;
+    width: 1em;
+    height: 1em;
+    padding: 0;
+    content: "";
+}
+
+.filterInput[type="checkbox"]+label:after {
+    position: absolute;
+    top: 0.45em;
+    left: 0.2em;
+    font-size: 0.8em;
+   color: var(--color2);
+    opacity: 0;
+    font-family: FontAwesome;
+    content: "\f00c";
+}
+
+.filterInput:checked+label:after {
+    opacity: 1;
+}
+
+.filterSelect {
+    height: 3.4em;
+    line-height: 2;
+}
+
+.filterSelect:first-of-type {
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.filterSelect:last-of-type {
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.filterSelect:focus,
+.filterSelect:active {
+    outline: 0;
+}
+
+.filterSelect option {
+    background-color: var(--color1);
+   color: var(--color2);
+}
+
+.filterInput-group {
+    margin-bottom: 1em;
+    zoom: 1;
+}
+
+.filterInput-group:before,
+.filterInput-group:after {
+    content: "";
+    display: table;
+}
+
+.filterInput-group:after {
+    clear: both;
+}
+
+.filterInput-group-icon {
+    position: relative;
+}
+
+.filterInput-group-icon input {
+    padding-left: 4.4em;
+}
+
+.filterInput-group-icon .input-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3.4em;
+    height: 3.4em;
+    line-height: 3.4em;
+    text-align: center;
+    pointer-events: none;
+}
+
+.filterInput-group-icon .input-icon:after {
+    position: absolute;
+    top: 0.6em;
+    bottom: 0.6em;
+    left: 3.4em;
+    display: block;
+    border-right: 1px solid #e5e5e5;
+    content: "";
+    -webkit-transition: 0.35s ease-in-out;
+    -moz-transition: 0.35s ease-in-out;
+    -o-transition: 0.35s ease-in-out;
+    transition: 0.35s ease-in-out;
+    transition: all 0.35s ease-in-out;
+}
+
+.filterInput-group-icon .input-icon i {
+    -webkit-transition: 0.35s ease-in-out;
+    -moz-transition: 0.35s ease-in-out;
+    -o-transition: 0.35s ease-in-out;
+    transition: 0.35s ease-in-out;
+    transition: all 0.35s ease-in-out;
+}
+
+
+
+.row {
+    zoom: 1;
+    margin-bottom:10px;
+}
+
+.row:before,
+.row:after {
+    content: "";
+    display: table;
+}
+
+.row:after {
+    clear: both;
+}
+
+.col-half {
+    padding-right: 10px;
+    float: left;
+    width: 50%;
+}
+
+.col-half:last-of-type {
+    padding-right: 0;
+}
+
+.col-third {
+    padding-right: 10px;
+    float: left;
+    width: 33.33333333%;
+}
+
+.col-third:last-of-type {
+    padding-right: 0;
+}
+
+.col-fourth {
+    padding-right: 5px;
+    float: left;
+    width: 25%;
+}
+.col-fourth:last-of-type {
+    padding-right: 0;
+}
+
+.modalContainer {
+    width: 100%;
+    padding: 3em 5em ;
+    margin: 0em auto;
+    background-color: #fff;
+    border-radius: 4.2px;
+    box-shadow: 0px 3px 10px -2px rgba(0, 0, 0, 0.2);
+}
+.variationContent{
+    background-color: #f9f9f9;
+    border: 1px solid #e5e5e5 ;
+    border-radius: 2px;
+    height: 300px;
+    margin-right: 5px;
+    padding: 10px 20px 10px 25px;
+}
+.submitBtn{
+    color: var(--color2);
+    background-color: var(--color1);
+
+}
+.submitBtn:hover{
+    opacity: 0.8;
+    
+}
+
+@media only screen and (max-width: 700px) {
+    .filter-content {
+    
+        margin: auto;
+        width: 95%;
+    }
+    .col-half {
+        width: 100%;
+        padding-right: 0;
+    }
+    .col-third {
+        width: 100%;
+        padding-right: 0;
+    }
+    .col-fourth {
+        width: 50%;
+        padding-right: 0;
+    }
+    .filterRadio{
+        font-size: 10px;
+        cursor:pointer!important;
+    }
+    
+}
